@@ -5,7 +5,7 @@ git 'https://github.com/swarnjava/awsgitrepo'
 }
 
 stage('Compile-Package'){
- 
-  sh "mvn package"
+  def mvnHome = tool name: 'MVN3.6', type: 'maven'
+  sh "${mvnHome}/bin/mvn package"
 }
 }
