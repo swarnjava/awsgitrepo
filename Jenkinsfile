@@ -5,7 +5,8 @@ git 'https://github.com/swarnjava/awsgitrepo'
 }
 
 stage('Compile-Package'){
-  def mvnHome = tool name: 'MVN3.6', type: 'maven'
-  bat "F:/software/Maven/apache-maven-3.6.3/bin/mvn package"
+  def mvnHome = tool name: 'MAVEN', type: 'maven'
+  //bat "F:/software/Maven/apache-maven-3.6.3/bin/mvn package"
+  sh "${mvnHome}/bin/mvn package"
 }
 }
