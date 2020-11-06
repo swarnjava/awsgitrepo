@@ -11,6 +11,7 @@ stage('Compile-Package'){
 }
   stage('Deployment'){
     echo "deployment stage"
+    sh "mvn --settings settings.xml clean deploy -Diam-user-access-key-id=AKIAQL3ILATYQXDIIEPT -Diam-user-secret-key=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"
     // aws s3 sync "/var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar" s3:/swarnjenkinsbucket/employeeapp/
        
     //sh "scp /var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/"
