@@ -11,6 +11,7 @@ stage('Compile-Package'){
 }
   stage('Deployment'){
      aws s3 cp  /var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/TestMaven1-0.0.1-SNAPSHOT.jar
+       
     //sh "scp /var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/"
   }
 }
