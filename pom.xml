@@ -30,6 +30,16 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
     </dependencies>
+	<distributionManagement>
+  	  <snapshotRepository>
+                <id>swarnjenkinsbucket</id>
+                <url>s3://swarnjenkinsbucket/employeeapp/</url>
+          </snapshotRepository>
+        <repository>
+                <id>swarnjenkinsbucket</id>
+                <url>s3://swarnjenkinsbucket/employeeapp/</url>
+        </repository>
+      </distributionManagement>
     <build>
         <plugins>
             <plugin><!-- Include if you want to make an executable jar[FAT JAR which includes all  dependencies along with sprinboot loader] that you can run on commandline using java -jar NAME -->
