@@ -12,7 +12,7 @@ stage('Compile-Package'){
   stage('Deployment'){
     echo "deployment stage"
    // sh "mvn --settings settings.xml clean deploy -Diam-user-access-key-id=AKIAQL3ILATYQXDIIEPT -Diam-user-secret-key=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"
-   sh "aws s3 cp /var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/"
+   sh "aws s3 cp /var/lib/jenkins/workspace/Swarn_CI_CD_Project1/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/"
        
     //sh "scp /var/lib/jenkins/workspace/jenkins-ec2-project/target/TestMaven1-0.0.1-SNAPSHOT.jar s3://swarnjenkinsbucket/employeeapp/"
   }
